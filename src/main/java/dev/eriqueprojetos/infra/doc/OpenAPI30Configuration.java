@@ -19,8 +19,8 @@ import org.springframework.context.annotation.Configuration;
                 license = @License(name = "Apache 2.0", url = "https://www.apache.org/licenses/LICENSE-2.0"), termsOfService = "TOS",
                 description = "API para registros de alagamentos"),
         servers = {
-                @Server(url = "https://portifolioAPI.onrender.com/", description = "Development"),
-                @Server(url = "http://localhost:80/", description = "Development")})
+                @Server(url = "https://portifolioapi.onrender.com/", description = "Development"),
+                @Server(url = "http://localhost:8080/", description = "Development")})
 public class OpenAPI30Configuration {
 /**
  * Configure the OpenAPI components.
