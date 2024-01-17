@@ -1,4 +1,15 @@
+FROM ubuntu:latest AS build
+
+RUN apt-get update
+RUN apt-get install openjdk-17-jdk maven -y
+COPY . .
+
+RUN mvn package
+
 FROM openjdk:17-jdk-slim
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+
+EXPOSE 8080
+
+COPY --from=build /target/thm-ocorrencias-1.jar app.jar
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
