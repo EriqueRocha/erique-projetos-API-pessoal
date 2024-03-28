@@ -13,7 +13,7 @@ public class CacheCleaner {
     private boolean limpezaJaRealizada = false;
 
     @Autowired
-    private CacheManager cacheManager; // Substitua pelo gerenciador de cache utilizado em sua aplicação
+    private CacheManager cacheManager;
 
     @Autowired
     private EntityManagerFactory entityManagerFactory; // Injeta o EntityManagerFactory para acesso ao cache do JPA
