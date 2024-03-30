@@ -8,5 +8,8 @@
     "sleepApplication": true,
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 3
+  },
+  "env": {
+    "IDLE_TIMEOUT": "600"
   }
 }
