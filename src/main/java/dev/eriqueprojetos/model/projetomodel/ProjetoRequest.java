@@ -14,6 +14,6 @@ public record ProjetoRequest(
 
         String repositorioFront,
 
-        String inkFront
+        String linkFront
 ) {
 }
